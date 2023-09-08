@@ -73,3 +73,13 @@
 3	92	7158871331735514	CMakeFiles/DataStructureSort.dir/io/github/APS/quick.c.obj	38a15e1a7a88693b
 11	118	7158871332015473	CMakeFiles/DataStructureSort.dir/io/github/APS/main.c.obj	45d63d3daafb1076
 119	217	7158871332955722	DataStructureSort.exe	4449816ee700179
+2	74	7158872318391918	CMakeFiles/DataStructureSort.dir/io/github/APS/bubble.c.obj	429b89c648b4bc25
+7	88	7158872318531958	CMakeFiles/DataStructureSort.dir/io/github/APS/quick.c.obj	38a15e1a7a88693b
+15	92	7158872318571979	CMakeFiles/DataStructureSort.dir/io/github/APS/heap.c.obj	2a250a2b23ae34ee
+11	117	7158872318831976	CMakeFiles/DataStructureSort.dir/io/github/APS/main.c.obj	45d63d3daafb1076
+117	216	7158872319782144	DataStructureSort.exe	4449816ee700179
+3	79	7158872538834907	CMakeFiles/DataStructureSort.dir/io/github/APS/bubble.c.obj	429b89c648b4bc25
+19	99	7158872539037486	CMakeFiles/DataStructureSort.dir/io/github/APS/heap.c.obj	2a250a2b23ae34ee
+13	103	7158872539087422	CMakeFiles/DataStructureSort.dir/io/github/APS/quick.c.obj	38a15e1a7a88693b
+8	111	7158872539172902	CMakeFiles/DataStructureSort.dir/io/github/APS/main.c.obj	45d63d3daafb1076
+112	210	7158872540121595	DataStructureSort.exe	4449816ee700179
