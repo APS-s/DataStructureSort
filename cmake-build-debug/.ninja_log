@@ -1,0 +1,25 @@
+# ninja log v5
+2	74	7158826166591724	CMakeFiles/DataStructureSort.dir/main.c.obj	ee5d9f522efbab2e
+104	203	7158853729822864	DataStructureSort.exe	d2644e6cdf6a83b2
+1	149	7158854364302730	build.ninja	8fa28d7cd250fb3c
+7	85	7158853728683282	CMakeFiles/DataStructureSort.dir/io/github/APS/quick.c.obj	38a15e1a7a88693b
+11	104	7158853728863275	CMakeFiles/DataStructureSort.dir/io/github/APS/main.c.obj	45d63d3daafb1076
+2	82	7158850991648729	CMakeFiles/DataStructureSort.dir/DataStructureSort/io/github/APS/quick.c.obj	577ca4241d2dbb51
+12	77	7158850991598765	CMakeFiles/DataStructureSort.dir/DataStructureSort/io/github/APS/bubble.c.obj	8c775e2a2dbeedab
+2	70	7158853728523315	CMakeFiles/DataStructureSort.dir/io/github/APS/bubble.c.obj	429b89c648b4bc25
+7	100	7158850991828755	CMakeFiles/DataStructureSort.dir/DataStructureSort/io/github/APS/main.c.obj	4540a2bb3901608c
+12	92	7158859989161802	CMakeFiles/DataStructureSort.dir/io/github/APS/bubble.c.obj	429b89c648b4bc25
+3	95	7158859989191821	CMakeFiles/DataStructureSort.dir/io/github/APS/quick.c.obj	38a15e1a7a88693b
+16	98	7158859989221863	CMakeFiles/DataStructureSort.dir/io/github/APS/heap.c.obj	2a250a2b23ae34ee
+8	116	7158859989411830	CMakeFiles/DataStructureSort.dir/io/github/APS/main.c.obj	45d63d3daafb1076
+116	215	7158859990372040	DataStructureSort.exe	4449816ee700179
+7	85	7158860752224104	CMakeFiles/DataStructureSort.dir/io/github/APS/bubble.c.obj	429b89c648b4bc25
+15	99	7158860752374094	CMakeFiles/DataStructureSort.dir/io/github/APS/heap.c.obj	2a250a2b23ae34ee
+11	102	7158860752404103	CMakeFiles/DataStructureSort.dir/io/github/APS/quick.c.obj	38a15e1a7a88693b
+2	112	7158860752514103	CMakeFiles/DataStructureSort.dir/io/github/APS/main.c.obj	45d63d3daafb1076
+112	211	7158860753474095	DataStructureSort.exe	4449816ee700179
+8	78	7158861318314280	CMakeFiles/DataStructureSort.dir/io/github/APS/bubble.c.obj	429b89c648b4bc25
+2	87	7158861318404214	CMakeFiles/DataStructureSort.dir/io/github/APS/quick.c.obj	38a15e1a7a88693b
+16	95	7158861318484223	CMakeFiles/DataStructureSort.dir/io/github/APS/heap.c.obj	2a250a2b23ae34ee
+12	113	7158861318664362	CMakeFiles/DataStructureSort.dir/io/github/APS/main.c.obj	45d63d3daafb1076
+113	210	7158861319603983	DataStructureSort.exe	4449816ee700179

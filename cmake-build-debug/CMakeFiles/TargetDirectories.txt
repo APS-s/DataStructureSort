@@ -1,0 +1,3 @@
+C:/Users/luisl/OneDrive/Faculdade/4º Semestre/APS/Programa/DataStructureSort/cmake-build-debug/CMakeFiles/DataStructureSort.dir
+C:/Users/luisl/OneDrive/Faculdade/4º Semestre/APS/Programa/DataStructureSort/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/luisl/OneDrive/Faculdade/4º Semestre/APS/Programa/DataStructureSort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
