@@ -98,5 +98,8 @@ int main() {
     free(dadosQuick);
     free(dadosHeap);
 
+    // Abre os arquivos com o Bloco de Notas (ou editor de texto padrão do sistema) utilizando o arquivo .bat em cmake-build-debug
+    system("open_files.bat");
+
     return 0;
 }
