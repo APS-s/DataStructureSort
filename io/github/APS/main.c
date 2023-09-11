@@ -9,7 +9,7 @@ int main() {
     int tamanho = 0;
 
     // Abre o arquivo para leitura
-    arquivo = fopen("./txtToSort/toSort2.txt", "r");
+    arquivo = fopen("./txtToSort/toSort1.txt", "r");
 
     if (arquivo == NULL) {
         printf("Erro ao abrir o arquivo.\n");
@@ -92,6 +92,16 @@ int main() {
     fclose(arquivo);
 
     printf("Os dados foram ordenados com o Heap Sort e escritos no arquivo heapSorted.txt.\n");
+
+    /*
+    // Criar um arquivo temporário com o caminho do arquivo atual
+    FILE *temp_file = fopen("temp_arquivo.txt", "w");
+    fprintf(temp_file, "./txtToSort/toSort2.txt");
+    fclose(temp_file);
+
+    // Abre o arquivo temporário com o Bloco de Notas
+    system("open_file.bat arquivoQueFoiOrdenado.txt");
+     */
 
     // Libera a memória alocada
     free(dadosBubble);
