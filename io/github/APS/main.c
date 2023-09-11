@@ -11,7 +11,8 @@ int main() {
     extern int numPassosQuick;
     extern int numPassosHeap;
 
-    arquivo = fopen("./txtToSort/toSort2.txt", "r");
+    const char* nomeArquivo = "./txtToSort/toSort7.txt";
+    arquivo = fopen(nomeArquivo, "r");
 
     if (arquivo == NULL) {
         printf("Erro ao abrir o arquivo.\n");
@@ -54,7 +55,6 @@ int main() {
 
     printf("Os dados foram ordenados com o Bubble Sort e escritos no arquivo bubbleSorted.txt.\n");
     printf("O Bubble Sort realizou %d passos.\n\n", numPassosBubble);
-    //
 
     // QuickSort
     QuickSort(dadosQuick, tamanho);
@@ -68,7 +68,6 @@ int main() {
 
     printf("Os dados foram ordenados com o Quick Sort e escritos no arquivo quickSorted.txt.\n");
     printf("O Quick Sort realizou %d passos.\n\n", numPassosQuick);
-    //
 
     // HeapSort
     HeapSort(dadosHeap, tamanho);
@@ -82,7 +81,6 @@ int main() {
 
     printf("Os dados foram ordenados com o Heap Sort e escritos no arquivo heapSorted.txt.\n");
     printf("O Heap Sort realizou %d passos.\n\n", numPassosHeap);
-    //
 
     // Libera a memória alocada
     free(dadosBubble);
@@ -91,6 +89,9 @@ int main() {
 
     // Abre os arquivos ordenados
     #ifdef _WIN32
+        char comando[100];
+        snprintf(comando, sizeof(comando), "notepad %s", nomeArquivo);
+        system(comando);
         system("open_files.bat");
     #endif
 
