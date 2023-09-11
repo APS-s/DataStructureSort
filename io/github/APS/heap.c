@@ -1,5 +1,7 @@
 #include "heap.h"
 
+int numPassosHeap = 0; // Variável global para contar os passos no Heap Sort
+
 void PercorreArvore(int* v, int raiz, int folha){
     int percorreu, maxfolhas, temp;
     percorreu = 0;
@@ -15,6 +17,7 @@ void PercorreArvore(int* v, int raiz, int folha){
             v[raiz] = v[maxfolhas];
             v[maxfolhas] = temp;
             raiz = maxfolhas;
+            numPassosHeap++; // Incrementa a contagem de passos aqui
         } else
             percorreu = 1;
     }

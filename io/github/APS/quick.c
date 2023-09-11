@@ -1,5 +1,6 @@
-#include <stdio.h>
 #include "quick.h"
+
+int numPassosQuick = 0; // Variável global para contar os passos
 
 void QuickSort(int* v, int tam){
     if (tam <= 1)
@@ -19,11 +20,13 @@ void QuickSort(int* v, int tam){
                 v[b] = auxiliar;
                 a++;
                 b--;
+                numPassosQuick++; // Incrementa a contagem de passos aqui
             }
         } while (a <= b);
 
         v[0] = v[b];
         v[b] = x;
+        numPassosQuick++; // Incrementa a contagem de passos aqui
         QuickSort(v, b);
         QuickSort(&v[a], tam - a);
     }
