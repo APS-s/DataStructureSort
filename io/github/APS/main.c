@@ -9,7 +9,7 @@ int main() {
     int tamanho = 0;
 
     // Abre o arquivo para leitura
-    arquivo = fopen("txtToSort/dtaleat1kdup1.txt", "r");
+    arquivo = fopen("./txtToSort/toSort2.txt", "r");
 
     if (arquivo == NULL) {
         printf("Erro ao abrir o arquivo.\n");
@@ -99,7 +99,8 @@ int main() {
     free(dadosHeap);
 
     // Abre os arquivos com o Bloco de Notas (ou editor de texto padrão do sistema) utilizando o arquivo .bat em cmake-build-debug
-    system("open_files.bat");
-
+    #ifdef _WIN32
+        system("open_files.bat");
+    #endif
     return 0;
 }
