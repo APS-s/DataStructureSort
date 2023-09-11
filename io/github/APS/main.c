@@ -42,7 +42,6 @@ int main() {
 
     fclose(arquivo);
 
-
     // BubbleSort
     BubbleSort(dadosBubble, tamanho);
     arquivo = fopen("txtSorted/bubbleSorted.txt", "w");
@@ -84,7 +83,6 @@ int main() {
     printf("Os dados foram ordenados com o Heap Sort e escritos no arquivo heapSorted.txt.\n");
     printf("O Heap Sort realizou %d passos.\n\n", numPassosHeap);
     //
-
 
     // Libera a memória alocada
     free(dadosBubble);
