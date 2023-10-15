@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="DataStructureSort"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DataStructureSort">
+				<Option output="D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/DataStructureSort.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 DataStructureSort"/>
+					<CompileFile command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DataStructureSort/fast">
+				<Option output="D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/DataStructureSort.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 DataStructureSort/fast"/>
+					<CompileFile command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/hugoh/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/UserFolders/Documents/GitHub/DataStructureSort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/UserFolders/Documents/GitHub/DataStructureSort/io/github/APS/bubble.c">
+			<Option target="DataStructureSort"/>
+		</Unit>
+		<Unit filename="D:/UserFolders/Documents/GitHub/DataStructureSort/io/github/APS/bubble.h">
+			<Option target="DataStructureSort"/>
+		</Unit>
+		<Unit filename="D:/UserFolders/Documents/GitHub/DataStructureSort/io/github/APS/heap.c">
+			<Option target="DataStructureSort"/>
+		</Unit>
+		<Unit filename="D:/UserFolders/Documents/GitHub/DataStructureSort/io/github/APS/heap.h">
+			<Option target="DataStructureSort"/>
+		</Unit>
+		<Unit filename="D:/UserFolders/Documents/GitHub/DataStructureSort/io/github/APS/main.c">
+			<Option target="DataStructureSort"/>
+		</Unit>
+		<Unit filename="D:/UserFolders/Documents/GitHub/DataStructureSort/io/github/APS/quick.c">
+			<Option target="DataStructureSort"/>
+		</Unit>
+		<Unit filename="D:/UserFolders/Documents/GitHub/DataStructureSort/io/github/APS/quick.h">
+			<Option target="DataStructureSort"/>
+		</Unit>
+		<Unit filename="D:/UserFolders/Documents/GitHub/DataStructureSort/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
