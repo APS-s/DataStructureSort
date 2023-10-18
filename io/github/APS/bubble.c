@@ -1,8 +1,11 @@
 #include "bubble.h"
+#include "microtime.h"
 
 int numPassosBubble = 0; // Variável global para contar os passos no Bubble Sort
+long long diffBubble = 0;
 
 void BubbleSort(int* v, int tam) {
+    diffBubble = getMilliseconds();
     numPassosBubble++; // Incrementa a contagem de passos (int i)
     int i;
     numPassosBubble++; // Incrementa a contagem de passos (int trocou)
@@ -35,4 +38,5 @@ void BubbleSort(int* v, int tam) {
         // Incrementa a contagem de passos (while trocou)
         numPassosBubble++;
     } while (trocou);
+    diffBubble = getMilliseconds() - diffBubble;
 }

@@ -8,10 +8,14 @@ int main() {
     FILE *arquivo;
     int tamanho = 0;
     extern int numPassosBubble;
+    extern long long diffBubble;
     extern int numPassosQuick;
+    extern long long diffQuick;
     extern int numPassosHeap;
+    extern long long diffHeap;
 
-    const char* nomeArquivo = "./txtToSort/toSort7.txt";
+
+    const char* nomeArquivo = "./txtToSort/toSort5.txt";
     arquivo = fopen(nomeArquivo, "r");
 
     if (arquivo == NULL) {
@@ -54,7 +58,7 @@ int main() {
     fclose(arquivo);
 
     printf("Os dados foram ordenados com o Bubble Sort e escritos no arquivo bubbleSorted.txt.\n");
-    printf("O Bubble Sort realizou %d passos.\n\n", numPassosBubble);
+    printf("O Bubble Sort realizou %d passos e levou %lldms.\n\n", numPassosBubble, diffBubble);
 
     // QuickSort
     QuickSort(dadosQuick, tamanho);
@@ -67,7 +71,7 @@ int main() {
     fclose(arquivo);
 
     printf("Os dados foram ordenados com o Quick Sort e escritos no arquivo quickSorted.txt.\n");
-    printf("O Quick Sort realizou %d passos.\n\n", numPassosQuick);
+    printf("O Quick Sort realizou %d passos e levou %lldms.\n\n", numPassosQuick, diffQuick);
 
     // HeapSort
     HeapSort(dadosHeap, tamanho);
@@ -80,7 +84,7 @@ int main() {
     fclose(arquivo);
 
     printf("Os dados foram ordenados com o Heap Sort e escritos no arquivo heapSorted.txt.\n");
-    printf("O Heap Sort realizou %d passos.\n\n", numPassosHeap);
+    printf("O Heap Sort realizou %d passos e levou %lldms.\n\n", numPassosHeap, diffHeap);
 
     // Libera a memória alocada
     free(dadosBubble);
