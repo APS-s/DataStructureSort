@@ -1,10 +1,12 @@
 #include "quick.h"
 #include "microtime.h"
 
-int numPassosQuick = 0; // Variável global para contar os passos
-long long diffQuick = 0;
+int numPassosQuick; // Variável global para contar os passos
+long long diffQuick;
 
 void QuickSort(int* v, int tam){
+    numPassosQuick = 0; // Deve-se iniciar o valor da variavel dentro do metodo para que este resete quando for ordenar outro arquivo
+    diffQuick = 0; // Deve-se iniciar o valor da variavel dentro do metodo para que este resete quando for ordenar outro arquivo
     diffQuick = getMilliseconds();
     numPassosQuick++; // Incrementa a contagem de passos (tam <= 1)
     if (tam <= 1) {

@@ -1,10 +1,11 @@
 #include "heap.h"
 #include "microtime.h"
 
-int numPassosHeap = 0; // Variável global para contar os passos no Heap Sort
-long long diffHeap = 0;
+int numPassosHeap; // Variável global para contar os passos no Heap Sort
+long long diffHeap;
 
 void PercorreArvore(int* v, int raiz, int folha){
+    numPassosHeap = 0; // Deve-se iniciar o valor da variavel dentro do metodo para que este resete quando for ordenar outro arquivo
     numPassosHeap+=3; // Incrementa a contagem de passos (inicialização das variáveis)
     int percorreu, maxfolhas, temp;
 
@@ -42,6 +43,7 @@ void PercorreArvore(int* v, int raiz, int folha){
 }
 
 void HeapSort(int* v, int tam){
+    diffHeap = 0; // Deve-se iniciar o valor da variavel dentro do metodo para que este resete quando for ordenar outro arquivo
     diffHeap = getMilliseconds();
     int i, temp;
 

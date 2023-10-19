@@ -6,98 +6,98 @@
 
 int main() {
     FILE *arquivo;
-    int tamanho = 0;
     extern int numPassosBubble;
     extern long long diffBubble;
     extern int numPassosQuick;
     extern long long diffQuick;
     extern int numPassosHeap;
     extern long long diffHeap;
+    int i = 1;
 
+    do {
+        int tamanho = 0;
+        char nomeArquivo[50];
+        sprintf(nomeArquivo, "./txtToSort(TESTs)/toSort%d.txt", i); // Substitua por: sprintf(nomeArquivo, "./txtToSort/toSort%d.txt", i); quando for finalizar os testes
+        arquivo = fopen(nomeArquivo, "r");
 
-    const char* nomeArquivo = "./txtToSort/toSort5.txt";
-    arquivo = fopen(nomeArquivo, "r");
+        if (arquivo == NULL) {
+            printf("Erro ao abrir o arquivo.\n");
+            return 1;
+        }
 
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo.\n");
-        return 1;
-    }
+        // Conta o número de elementos no arquivo
+        int numero;
+        while (fscanf(arquivo, "%d", &numero) != EOF) {
+            tamanho++;
+        }
 
-    // Conta o número de elementos no arquivo
-    int numero;
-    while (fscanf(arquivo, "%d", &numero) != EOF) {
-        tamanho++;
-    }
+        // Volta ao início do arquivo
+        fseek(arquivo, 0, SEEK_SET);
 
-    // Volta ao início do arquivo
-    fseek(arquivo, 0, SEEK_SET);
+        // Aloca espaço para armazenar os números para as ordenações
+        int *dadosBubble = (int*)malloc(tamanho * sizeof(int));
+        int *dadosQuick = (int*)malloc(tamanho * sizeof(int));
+        int *dadosHeap = (int*)malloc(tamanho * sizeof(int));
 
-    // Aloca espaço para armazenar os números para as ordenações
-    int *dadosBubble = (int*)malloc(tamanho * sizeof(int));
-    int *dadosQuick = (int*)malloc(tamanho * sizeof(int));
-    int *dadosHeap = (int*)malloc(tamanho * sizeof(int));
+        // Lê os números do arquivo e armazena nos arrays correspondentes
+        for (int j = 0; j < tamanho; j++) {
+            fscanf(arquivo, "%d", &numero);
+            dadosBubble[j] = numero;
+            dadosQuick[j] = numero;
+            dadosHeap[j] = numero;
+        }
 
-    // Lê os números do arquivo e armazena nos arrays correspondentes
-    for (int i = 0; i < tamanho; i++) {
-        fscanf(arquivo, "%d", &numero);
-        dadosBubble[i] = numero;
-        dadosQuick[i] = numero;
-        dadosHeap[i] = numero;
-    }
+        fclose(arquivo);
 
-    fclose(arquivo);
+        // BubbleSort
+        BubbleSort(dadosBubble, tamanho);
+        sprintf(nomeArquivo, "txtSorted/bubbleSorted%d-%dpassos-%lldms.txt", i, numPassosBubble,diffBubble);
+        arquivo = fopen(nomeArquivo, "w");
 
-    // BubbleSort
-    BubbleSort(dadosBubble, tamanho);
-    arquivo = fopen("txtSorted/bubbleSorted.txt", "w");
+        for (int j = 0; j < tamanho; j++) {
+            fprintf(arquivo, "%d\n", dadosBubble[j]);
+        }
 
-    for (int i = 0; i < tamanho; i++) {
-        fprintf(arquivo, "%d\n", dadosBubble[i]);
-    }
+        fclose(arquivo);
 
-    fclose(arquivo);
+        printf("Os dados foram ordenados com o Bubble Sort e escritos no arquivo bubbleSorted%d.txt.\n", i);
+        printf("O Bubble Sort realizou %d passos e levou %lldms.\n\n", numPassosBubble, diffBubble);
 
-    printf("Os dados foram ordenados com o Bubble Sort e escritos no arquivo bubbleSorted.txt.\n");
-    printf("O Bubble Sort realizou %d passos e levou %lldms.\n\n", numPassosBubble, diffBubble);
+        // QuickSort
+        QuickSort(dadosQuick, tamanho);
+        sprintf(nomeArquivo, "txtSorted/quickSorted%d-%dpassos-%lldms.txt", i, numPassosQuick,diffQuick);
+        arquivo = fopen(nomeArquivo, "w");
 
-    // QuickSort
-    QuickSort(dadosQuick, tamanho);
-    arquivo = fopen("txtSorted/quickSorted.txt", "w");
+        for (int j = 0; j < tamanho; j++) {
+            fprintf(arquivo, "%d\n", dadosQuick[j]);
+        }
 
-    for (int i = 0; i < tamanho; i++) {
-        fprintf(arquivo, "%d\n", dadosQuick[i]);
-    }
+        fclose(arquivo);
 
-    fclose(arquivo);
+        printf("Os dados foram ordenados com o Quick Sort e escritos no arquivo quickSorted%d.txt.\n", i);
+        printf("O Quick Sort realizou %d passos e levou %lldms.\n\n", numPassosQuick, diffQuick);
 
-    printf("Os dados foram ordenados com o Quick Sort e escritos no arquivo quickSorted.txt.\n");
-    printf("O Quick Sort realizou %d passos e levou %lldms.\n\n", numPassosQuick, diffQuick);
+        // HeapSort
+        HeapSort(dadosHeap, tamanho);
+        sprintf(nomeArquivo, "txtSorted/heapSorted%d-%dpassos-%lldms.txt", i, numPassosHeap,diffHeap);
+        arquivo = fopen(nomeArquivo, "w");
 
-    // HeapSort
-    HeapSort(dadosHeap, tamanho);
-    arquivo = fopen("txtSorted/heapSorted.txt", "w");
+        for (int j = 0; j < tamanho; j++) {
+            fprintf(arquivo, "%d\n", dadosHeap[j]);
+        }
 
-    for (int i = 0; i < tamanho; i++) {
-        fprintf(arquivo, "%d\n", dadosHeap[i]);
-    }
+        fclose(arquivo);
 
-    fclose(arquivo);
+        printf("Os dados foram ordenados com o Heap Sort e escritos no arquivo heapSorted%d.txt.\n", i);
+        printf("O Heap Sort realizou %d passos e levou %lldms.\n\n", numPassosHeap, diffHeap);
 
-    printf("Os dados foram ordenados com o Heap Sort e escritos no arquivo heapSorted.txt.\n");
-    printf("O Heap Sort realizou %d passos e levou %lldms.\n\n", numPassosHeap, diffHeap);
+        // Libera a memória alocada
+        free(dadosBubble);
+        free(dadosQuick);
+        free(dadosHeap);
 
-    // Libera a memória alocada
-    free(dadosBubble);
-    free(dadosQuick);
-    free(dadosHeap);
-
-    // Abre os arquivos ordenados
-    #ifdef _WIN32
-        char comando[100];
-        snprintf(comando, sizeof(comando), "notepad %s", nomeArquivo);
-        system(comando);
-        system("open_files.bat");
-    #endif
+        i++;
+    } while (i <= 3); // Substitua por: } while (i <= 8); quando for finalizar os testes
 
     return 0;
 }
