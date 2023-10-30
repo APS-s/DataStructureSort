@@ -73,12 +73,6 @@ build CMakeFiles/DataStructureSort.dir/io/github/APS/heap.c.obj: C_COMPILER__Dat
   OBJECT_DIR = CMakeFiles\DataStructureSort.dir
   OBJECT_FILE_DIR = CMakeFiles\DataStructureSort.dir\io\github\APS
 
-build CMakeFiles/DataStructureSort.dir/io/github/APS/microtime.c.obj: C_COMPILER__DataStructureSort_unscanned_Debug C$:/Users/luisl/OneDrive/Faculdade/4º$ Semestre/APS/Programa/DataStructureSort/io/github/APS/microtime.c || cmake_object_order_depends_target_DataStructureSort
-  DEP_FILE = CMakeFiles\DataStructureSort.dir\io\github\APS\microtime.c.obj.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\DataStructureSort.dir
-  OBJECT_FILE_DIR = CMakeFiles\DataStructureSort.dir\io\github\APS
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DataStructureSort
@@ -87,7 +81,7 @@ build CMakeFiles/DataStructureSort.dir/io/github/APS/microtime.c.obj: C_COMPILER
 #############################################
 # Link the executable DataStructureSort.exe
 
-build DataStructureSort.exe: C_EXECUTABLE_LINKER__DataStructureSort_Debug CMakeFiles/DataStructureSort.dir/io/github/APS/main.c.obj CMakeFiles/DataStructureSort.dir/io/github/APS/bubble.c.obj CMakeFiles/DataStructureSort.dir/io/github/APS/quick.c.obj CMakeFiles/DataStructureSort.dir/io/github/APS/heap.c.obj CMakeFiles/DataStructureSort.dir/io/github/APS/microtime.c.obj
+build DataStructureSort.exe: C_EXECUTABLE_LINKER__DataStructureSort_Debug CMakeFiles/DataStructureSort.dir/io/github/APS/main.c.obj CMakeFiles/DataStructureSort.dir/io/github/APS/bubble.c.obj CMakeFiles/DataStructureSort.dir/io/github/APS/quick.c.obj CMakeFiles/DataStructureSort.dir/io/github/APS/heap.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\DataStructureSort.dir

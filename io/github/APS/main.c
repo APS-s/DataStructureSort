@@ -7,17 +7,13 @@
 int main() {
     FILE *arquivo;
     extern int numPassosBubble;
-    extern long long diffBubble;
     extern int numPassosQuick;
-    extern long long diffQuick;
     extern int numPassosHeap;
-    extern long long diffHeap;
-    int i = 1;
 
-    do {
+    for(int i = 1; i <= 9; i++) { // Substitua por: for(int i = 1; i <= 8; i++) { quando for finalizar os testes
         int tamanho = 0;
         char nomeArquivo[50];
-        sprintf(nomeArquivo, "./txtToSort(TESTs)/toSort%d.txt", i); // Substitua por: sprintf(nomeArquivo, "./txtToSort/toSort%d.txt", i); quando for finalizar os testes
+        sprintf(nomeArquivo, "./txtToSort/toSort%d.txt", i); // Substitua por: sprintf(nomeArquivo, "./txtToSort/toSort%d.txt", i); quando for finalizar os testes
         arquivo = fopen(nomeArquivo, "r");
 
         if (arquivo == NULL) {
@@ -49,9 +45,10 @@ int main() {
 
         fclose(arquivo);
 
+
         // BubbleSort
         BubbleSort(dadosBubble, tamanho);
-        sprintf(nomeArquivo, "txtSorted/bubbleSorted%d-%dpassos-%lldms.txt", i, numPassosBubble,diffBubble);
+        sprintf(nomeArquivo, "txtSorted/bubbleSorted%d-%dpassos.txt", i, numPassosBubble);
         arquivo = fopen(nomeArquivo, "w");
 
         for (int j = 0; j < tamanho; j++) {
@@ -61,11 +58,13 @@ int main() {
         fclose(arquivo);
 
         printf("Os dados foram ordenados com o Bubble Sort e escritos no arquivo bubbleSorted%d.txt.\n", i);
-        printf("O Bubble Sort realizou %d passos e levou %lldms.\n\n", numPassosBubble, diffBubble);
+        printf("O Bubble Sort realizou %d passos\n\n", numPassosBubble);
+
 
         // QuickSort
+        numPassosQuick = 0;
         QuickSort(dadosQuick, tamanho);
-        sprintf(nomeArquivo, "txtSorted/quickSorted%d-%dpassos-%lldms.txt", i, numPassosQuick,diffQuick);
+        sprintf(nomeArquivo, "txtSorted/quickSorted%d-%dpassos.txt", i, numPassosQuick);
         arquivo = fopen(nomeArquivo, "w");
 
         for (int j = 0; j < tamanho; j++) {
@@ -75,11 +74,13 @@ int main() {
         fclose(arquivo);
 
         printf("Os dados foram ordenados com o Quick Sort e escritos no arquivo quickSorted%d.txt.\n", i);
-        printf("O Quick Sort realizou %d passos e levou %lldms.\n\n", numPassosQuick, diffQuick);
+        printf("O Quick Sort realizou %d passos.\n\n", numPassosQuick);
+
 
         // HeapSort
+        numPassosHeap = 0;
         HeapSort(dadosHeap, tamanho);
-        sprintf(nomeArquivo, "txtSorted/heapSorted%d-%dpassos-%lldms.txt", i, numPassosHeap,diffHeap);
+        sprintf(nomeArquivo, "txtSorted/heapSorted%d-%dpassos.txt", i, numPassosHeap);
         arquivo = fopen(nomeArquivo, "w");
 
         for (int j = 0; j < tamanho; j++) {
@@ -89,15 +90,14 @@ int main() {
         fclose(arquivo);
 
         printf("Os dados foram ordenados com o Heap Sort e escritos no arquivo heapSorted%d.txt.\n", i);
-        printf("O Heap Sort realizou %d passos e levou %lldms.\n\n", numPassosHeap, diffHeap);
+        printf("O Heap Sort realizou %d passos\n\n", numPassosHeap);
+
 
         // Libera a memória alocada
         free(dadosBubble);
         free(dadosQuick);
         free(dadosHeap);
-
-        i++;
-    } while (i <= 3); // Substitua por: } while (i <= 8); quando for finalizar os testes
+    }
 
     return 0;
 }

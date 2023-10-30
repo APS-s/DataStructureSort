@@ -1,62 +1,31 @@
 #include "quick.h"
-#include "microtime.h"
 
-int numPassosQuick; // Variável global para contar os passos
-long long diffQuick;
+int numPassosQuick;
 
-void QuickSort(int* v, int tam){
-    numPassosQuick = 0; // Deve-se iniciar o valor da variavel dentro do metodo para que este resete quando for ordenar outro arquivo
-    diffQuick = 0; // Deve-se iniciar o valor da variavel dentro do metodo para que este resete quando for ordenar outro arquivo
-    diffQuick = getMilliseconds();
-    numPassosQuick++; // Incrementa a contagem de passos (tam <= 1)
-    if (tam <= 1) {
+void QuickSort(int* v, int tam) {
+    if (tam <= 1)
         return;
-    } else {
-        numPassosQuick++; // Incrementa a contagem de passos (x = v[0])
+    else {
         int x = v[0];
-        numPassosQuick++; // Incrementa a contagem de passos (a = 1)
         int a = 1;
-        numPassosQuick++; // Incrementa a contagem de passos (b = tam - 1)
         int b = tam - 1;
         do {
-            while ((a < tam) && (v[a] <= x)) {
-                numPassosQuick++; // Incrementa a contagem de passos (a++)
+            while ((a < tam) && (v[a] <= x))
                 a++;
-
-                numPassosQuick+=2; // Incrementa a contagem de passos (a < tam && v[a] <= x)
-            }
-            while (v[b] > x) {
-                numPassosQuick++; // Incrementa a contagem de passos (b--)
+            while (v[b] > x)
                 b--;
-
-                numPassosQuick++; // Incrementa a contagem de passos (v[b] > x)
-            }
-
-            numPassosQuick++; // Incrementa a contagem de passos (a <= b)
             if (a < b) {
-                numPassosQuick++; // Incrementa a contagem de passos (auxiliar = v[a])
-                int auxiliar = v[a];
-                numPassosQuick++; // Incrementa a contagem de passos (v[a] = v[b])
+                int temp = v[a];
                 v[a] = v[b];
-                numPassosQuick++; // Incrementa a contagem de passos (v[b] = auxiliar)
-                v[b] = auxiliar;
-                numPassosQuick++; // Incrementa a contagem de passos (a++)
+                v[b] = temp;
                 a++;
-                numPassosQuick++; // Incrementa a contagem de passos (b--)
                 b--;
             }
-
-            numPassosQuick++; // Incrementa a contagem de passos (while a <= b)
+            numPassosQuick++;
         } while (a <= b);
-
-        numPassosQuick++; // Incrementa a contagem de passos (v[0] = v[b])
         v[0] = v[b];
-        numPassosQuick++; // Incrementa a contagem de passos (v[b] = x)
         v[b] = x;
-        numPassosQuick++; // Incrementa a contagem de passos (QuickSort)
         QuickSort(v, b);
-        numPassosQuick++; // Incrementa a contagem de passos (QuickSort)
         QuickSort(&v[a], tam - a);
     }
-    diffQuick = getMilliseconds() - diffQuick;
 }
