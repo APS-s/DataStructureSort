@@ -10,7 +10,7 @@ int main() {
     extern int numPassosQuick;
     extern int numPassosHeap;
 
-    for(int i = 1; i <= 9; i++) { // Substitua por: for(int i = 1; i <= 8; i++) { quando for finalizar os testes
+    for(int i = 1; i <= 10; i++) { // Substitua por: for(int i = 1; i <= 8; i++) { quando for finalizar os testes
         int tamanho = 0;
         char nomeArquivo[50];
         sprintf(nomeArquivo, "./txtToSort/toSort%d.txt", i); // Substitua por: sprintf(nomeArquivo, "./txtToSort/toSort%d.txt", i); quando for finalizar os testes
